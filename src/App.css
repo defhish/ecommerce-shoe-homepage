@@ -1,83 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   padding: 0;
-  background-color: white;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
   display: flex;
   justify-content: center;
-  height: 100vh;
+  align-items: center;
+  background-color: white;
 }
 
 .container {
   background-color: black;
-  width: 90vw;
-  max-width: 1300px;
+  width: 100vw;
+  height: 100vh;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  border-radius: 50px;
+  align-items: flex-start; 
   box-sizing: border-box;
   color: white;
   overflow-wrap: break-word;
   text-align: left;
+  overflow-y: auto;
 }
-.heading-contact{
-  color:rgb(132, 128, 128);
-  font-size:medium;
-  font-weight:bolder;
-}
-.heading{
-  color:rgb(132, 128, 128);
-  font-size:medium;
-  font-weight:bolder;
-  padding-bottom:10px
-}
-.icons{
-  height:20px;
-  padding-right:15px;
-  width:23px;
-}
-.icons-mail{
-  height:15px;
-  padding-right:15px;
 
+.heading-contact, .heading {
+  color: rgb(132, 128, 128);
+  font-size: medium;
+  font-weight: bolder;
 }
-.icon-gps{
-  height:20px;
-  display:flex;
-  position: relative; 
+
+.heading {
+  padding-bottom: 10px;
+}
+
+.icons {
+  height: 20px;
+  padding-right: 15px;
+  width: 23px;
+}
+
+.icons-mail {
+  height: 15px;
+  padding-right: 15px;
+}
+
+.icon-gps {
+  height: 20px;
+  display: flex;
+  position: relative;
   transform: translateY(5px);
 }
-.icons-payment{
-  height:30px;
+
+.icons-payment {
+  height: 30px;
   margin-right: 20px;
   margin-bottom: 10px;
-  width:45px;
+  width: 45px;
   border-radius: 5px;
 }
+
 .contact-item-location {
   display: flex;
   align-items: first baseline;
 }
+
 .contact-item {
   display: flex;
   align-items: center;
 }
-.content-contact{
+
+.content-contact {
   font-size: small;
   text-align: left;
   padding-left: 5px;
 }
-.content{
+
+.content {
   text-align: left;
   padding-left: 5px;
-  align-items:center;
-  font-size:small;
+  align-items: center;
+  font-size: small;
 }
-.spacing{
-  padding-bottom:1px;
+
+.spacing {
+  padding-bottom: 1px;
+}
+
+.section {
+  flex: 1 1 200px; 
+  margin: 10px; 
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px; 
+    color: white;
+    font-size: medium; 
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    width: 100%; 
+    margin: 10px 0; 
+  }
+
+  .content, .content-contact {
+    text-align: center; 
+    padding-left: 0;
+  }
+
+  .icons, .icons-payment {
+    margin: 0 5px; 
+  }
+
+  .contact-item, .contact-item-location {
+    justify-content: center; 
+  }
 }
